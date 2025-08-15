@@ -56,7 +56,7 @@ export default function Filme() {
         <p className="text-center text-red-600 py-3">Carregando...</p>
       )}
 
-      <div className="flex gap-10 mt-10 justify-center">
+      <div className="flex gap-10 mt-10 justify-center flex-col md:flex-row items-center">
         <div>
           <Image
             src={
@@ -71,7 +71,7 @@ export default function Filme() {
           />
         </div>
 
-        <div>
+        <div className="p-10 md:p-0">
           <p className="max-w-lg font-bold mt-5">Sinopse</p>
           <p className="mt-2 max-w-lg">{filme?.overview}</p>
           <div className="flex gap-2 mt-3">
