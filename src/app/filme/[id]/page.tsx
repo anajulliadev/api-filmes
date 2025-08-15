@@ -78,19 +78,20 @@ export default function Filme() {
             <p className="font-semibold">Lançamento:</p>
             {filme?.release_date?.slice(0, 4)}
           </div>
-          <div className="flex gap-2 mt-3">
-            <p className="font-semibold">Lançamento:</p>
-            {filme?.release_date?.slice(0, 4)}
-          </div>
           <div className="flex gap-2 mt-3 items-center">
             <p className="font-semibold">Nota:</p>
             {filme?.vote_average?.toFixed(1)} <Star size={12} />
           </div>
           <div className="flex gap-2 mt-3 items-center">
             <p className="font-semibold">Direção:</p>
+            {filme?.credits?.crew
+              ?.filter((p) => p.job === "Director")
+              .map((p) => p.name)
+              .join(", ")}
           </div>
           <div className="flex gap-2 mt-3 items-center">
             <p className="font-semibold">Gêneros:</p>
+            {filme?.genres?.map((g) => g.name).join(", ")}
           </div>
         </div>
       </div>
