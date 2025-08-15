@@ -17,9 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased`}>
-        <Suspense fallback={null}>
-          <Navbar />
-        </Suspense>
+        <Navbar />
         <div>{children}</div>
       </body>
     </html>
