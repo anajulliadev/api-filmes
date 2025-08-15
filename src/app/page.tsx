@@ -22,8 +22,8 @@ export default function Page() {
       const url = q
         ? `${base}/search/movie?api_key=${
             process.env.NEXT_PUBLIC_TMDB_API_KEY
-          }&language=pt=BR&query=${encodeURIComponent(q)}`
-        : `${base}/movie/popular?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}&language=pt=BR`;
+          }&language=pt-BR&query=${encodeURIComponent(q)}`
+        : `${base}/movie/popular?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}&language=pt-BR`;
 
       try {
         const res = await fetch(url);
